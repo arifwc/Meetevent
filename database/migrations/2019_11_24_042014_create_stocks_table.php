@@ -17,9 +17,9 @@ class CreateStocksTable extends Migration
             $table->bigIncrements('id');
             $table->string('vendor_name',255);
             $table->string('product',100);
-            $table->boolean('default');
+            $table->boolean('isDefault');
             $table->integer('stock');
-            $table->date('date');
+            $table->date('date')->nullable();
             $table->timestamps();
         });
     }

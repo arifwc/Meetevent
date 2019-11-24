@@ -15,7 +15,9 @@ class CreateRentsTable extends Migration
     {
         Schema::create('rents', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->date('date');
+            $table->integer('product_id');
+            $table->date('start_date');
+            $table->date('end_date');
             $table->string('product',100);
             $table->integer('amount');
             $table->timestamps();
