@@ -19,6 +19,7 @@ class CreateVendorsTable extends Migration
             $table->enum('category', ['sound','stage','food']);
             $table->string('city', 100);
             $table->string('address',255);
+            $table->string('profile_image',255);
         });
     }
 
