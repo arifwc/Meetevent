@@ -16,7 +16,7 @@ class CreateVendorsTable extends Migration
         Schema::create('vendors', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 255);
-            $table->enum('category', ['sound','stage','food']);
+            $table->enum('category', ['sound','stage','equipment']);
             $table->string('city', 100);
             $table->string('address',255);
             $table->string('profile_image',255);

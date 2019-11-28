@@ -17,7 +17,8 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('vendor_id');
             $table->string('name',255);
-            $table->string('image_path',255);
+            $table->integer('stock');
+            $table->integer('price');
             $table->timestamps();
         });
     }

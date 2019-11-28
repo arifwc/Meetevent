@@ -6,5 +6,5 @@ use Illuminate\Http\Request;
 
 class VendorController extends Controller
 {
-    // fungsi fungsinya : add product, manage stock, manage product, manage profile
+    // fungsi fungsinya : manage profile, manage list (crud produk in list)
 }
