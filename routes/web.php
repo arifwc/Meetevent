@@ -12,9 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/vendor/{vendor}',['uses'=>'TransactionController@lookVendor']);
+Route::get('/category', [
+    'uses' => 'CategoryController@new'
+]);
 
-Route::post('/vendor/rent','TransactionController@nyewa');
+Route::get('/product/{id}', [
+    'uses' => 'CategoryController@singleProduct',
+    'as' => 'product.single'
+]);
