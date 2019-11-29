@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/vendor/{vendor}',['uses'=>'TransactionController@lookVendor']);
+
+Route::post('/vendor/rent','TransactionController@nyewa');

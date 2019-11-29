@@ -18,7 +18,8 @@ class CreateRentsTable extends Migration
             $table->integer('user_id');
             $table->integer('product_id');
             $table->integer('amount');
-            $table->date('rent_date');
+            $table->date('start_date');
+            $table->date('end_date');
             $table->integer('total_price');
             $table->timestamps();
         });

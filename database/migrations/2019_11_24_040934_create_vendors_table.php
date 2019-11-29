@@ -20,6 +20,8 @@ class CreateVendorsTable extends Migration
             $table->string('city', 100);
             $table->string('address',255);
             $table->string('profile_image',255);
+            $table->string('email');
+            $table->string('nohp');
         });
     }
 
