@@ -19,6 +19,10 @@ Route::get('/category', [
     'uses' => 'CategoryController@new'
 ]);
 
+Route::get('/category/{category}', [
+    'uses' => 'CategoryController@category'
+]);
+
 Route::get('/product/{id}', [
     'uses' => 'CategoryController@singleProduct',
     'as' => 'product.single'

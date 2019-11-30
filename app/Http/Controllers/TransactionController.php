@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Vendor;
 use App\Rent;
 use App\Product;
+use Carbon\Carbon;
 
 class TransactionController extends Controller
 {
@@ -26,7 +27,7 @@ class TransactionController extends Controller
         $stock = $liatproduk->stock;
         foreach($liatsewa as $sewa){
             if($stock > $request->input('amount')){
-                return view('liatVendor',["error"=>"Pesanan anda tidak dapat dibuat karena stok tidak mencukupi#"]);
+                return view('liatVendor',["error"=>"Pesanan anda tidak dapat dibuat karena stok tidak mencukupi"]);
             }
         }
         
@@ -43,7 +44,12 @@ class TransactionController extends Controller
 
     public function transfer()
     {
-        return view('transfer');
+        $rent = Rent::where('user_id',Auth::id())->where('created_at','<',Carbon::now()->subHours(3))->get();
+        $total=0;
+        foreach($rent as $sewa){
+            $total+=$sewa->total_price;
+        }
+        return view('transfer',compact('total','rent'));
     }
     
     
