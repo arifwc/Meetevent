@@ -42,6 +42,11 @@ Route::get('/product/{id}/order', [
     'as' => 'product.order'
 ]);
 
+Route::post('/order', [
+    'uses'=> 'TransactionController@nyewa',
+    'as' => 'rent'
+]);
+
 Route::get('/finish', function () {
     return view('finish');
 });

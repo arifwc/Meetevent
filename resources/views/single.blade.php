@@ -80,18 +80,26 @@
                         <div class="col-xl-12">
                           <div class="add-review">
                               <h3>Detail Pesanan</h3>
-                              <form action="{{ route('product.order', ['id' => $products->id]) }}" class="main-form">
-                              <div class="col-sm-4" id="datepicker-container">
+                              <form action="{{ route('rent') }}" class="main-form">
+                              <input type="hidden" name="product" value="{{$products->id}}">
+                              <div class="col-sm-4" >
                                   <p style="text-align:left">Tanggal mulai:</p>
-                                    <input  type="text" class="form-control">
+                                    <input name="start_date" type="date" class="form-control">
                               </div>
-                              <div class="col-sm-4" id="datepicker-container">
-                                  <p style="text-align:left">Tanggal mulai:</p>
-                                    <input  type="text" class="form-control">
+                              <br>
+                              <div class="col-sm-4" >
+                                  <p style="text-align:left">Tanggal berakhir:</p>
+                                    <input name="end_date" type="date" class="form-control">
                               </div>
-                                  <input name="jumlah" type="text" placeholder="Jumlah" onfocus="this.placeholder=''" onblur="this.placeholder = 'Jumlah'" required class="common-input">
-                                  <textarea placeholder="Order Notes" onfocus="this.placeholder=''" onblur="this.placeholder = 'Order Notes'" required class="common-textarea"></textarea>
-                                  <button class="view-btn color-2"><span>Order</span></button>
+                              <br>
+                              <div class="col-sm-4" >
+                                <p style="text-align:left">Jumlah</p>
+                                <input name="jumlah" type="text" placeholder="Jumlah" onblur="this.placeholder = 'Jumlah'" required class="common-input">
+                            </div>
+                            <br>
+                            <div class="col-sm-4">
+                                <button type="submit" class="view-btn color-2"><span>Order</span></button>
+                            </div>
                               </form>
                           </div>
                         </div>

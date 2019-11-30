@@ -39,17 +39,14 @@ class TransactionController extends Controller
         $sewa->amount = $request->input('amount');
         $sewa->total_price = $sewa->amount*$liatproduk->price;
         $sewa->save();
-        return redirect()->route('transfer');
+        return redirect()->route('product.order');
     }
 
     public function transfer()
     {
         $rent = Rent::where('user_id',Auth::id())->where('created_at','<',Carbon::now()->subHours(3))->get();
-        $total=0;
-        foreach($rent as $sewa){
-            $total+=$sewa->total_price;
-        }
-        return view('transfer',compact('total','rent'));
+
+        return view('transfer',compact('rent'));
     }
     
     
