@@ -21,4 +21,9 @@ class CategoryController extends Controller
     public function singleProduct($id){
       return view('single', ['products' => Product::find($id)]);
     }
+
+    public function orderProduct(Request $request, $id){
+      $data['orderForm'] = $request->all();
+      return view('order', ['products' => Product::find($id)], $data);
+    }
 }

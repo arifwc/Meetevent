@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+
 Route::get('/category', [
     'uses' => 'CategoryController@new'
 ]);
@@ -27,3 +36,12 @@ Route::get('/product/{id}', [
     'uses' => 'CategoryController@singleProduct',
     'as' => 'product.single'
 ]);
+
+Route::get('/product/{id}/order', [
+    'uses' => 'CategoryController@orderProduct',
+    'as' => 'product.order'
+]);
+
+Route::get('/finish', function () {
+    return view('finish');
+});

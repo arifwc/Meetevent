@@ -4,7 +4,7 @@
   <!-- Mobile Specific Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Favicon-->
-  <link rel="shortcut icon" href="img/fav.png">
+  <link rel="shortcut icon" href="img/icon.ico">
   <!-- Author Meta -->
   <meta name="author" content="CodePixar">
   <!-- Meta Description -->
@@ -27,6 +27,7 @@
      <link rel="stylesheet" href="{{asset('css/ion.rangeSlider.skinFlat.css')}}" />
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.standalone.css')}}">
   </head>
   <body>
 
@@ -39,7 +40,7 @@
               <li><a href="mailto:support@meetevent.com">support@meetevent.com</a></li>
             </ul>
             <ul class="list">
-              <li><a href="#">login</a></li>
+              <li><a href="/login">login</a></li>
             </ul>
           </div>
         </div>
@@ -58,7 +59,7 @@
               <ul class="navbar-nav">
               <li><a href="/">Home</a></li>
               <li><a href="/category">Category</a></li>
-              <li><a href="cart.html">Cart</a></li>
+              <li><a href="/contact">Contact</a></li>
               </ul>
             </div>
         </div>
@@ -147,6 +148,11 @@
     <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
     <!-- <script src="{{asset('js/owl.carousel.min.js')}}"></script> -->
     <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
+    <script>
+    $('#datepicker-container input').datepicker({
+    });
+    </script>
 
   </body>
 </html>

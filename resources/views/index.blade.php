@@ -10,7 +10,7 @@
           Cari Vendor Terbaik <br>
           untuk Event Anda!
         </h1>
-        <button class="primary-btn text-uppercase"><a href="category.html">Cari Vendor Sekarang!</a></button>
+        <button class="primary-btn text-uppercase"><a href="/category">Cari Vendor Sekarang!</a></button>
       </div>
     </div>
   </div>
