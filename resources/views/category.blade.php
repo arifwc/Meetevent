@@ -4,7 +4,8 @@
 <section class="lattest-product-area pb-40 category-list">
   <div class="row">
 
-  <?php foreach ($products as $product): ?>
+  @foreach ($vendors as $vendor)
+  @foreach ($vendor->product as $product)
     <div class="col-xl-4 col-lg-6 col-md-12 col-sm-6 single-product">
       <div class="content">
           <div class="content-overlay"></div>
@@ -22,8 +23,8 @@
        </div>
 
     </div>
-
-  <?php endforeach; ?>
+  @endforeach
+  @endforeach
 
 
 

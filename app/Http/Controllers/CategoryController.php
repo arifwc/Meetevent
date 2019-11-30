@@ -10,12 +10,14 @@ class CategoryController extends Controller
 
 {
     public function new(){
-      return view('category', ['products' => Product::paginate(9)]);
+      $vendors = Vendor::all();
+      return view('category', compact('vendors'));
     }
 
     public function category($category){
-      $product = Vendor::where('category',$category)->paginate(9);
-      return view('category',compact('products'));
+      $vendors = Vendor::where('category',$category)->get();
+      return view('category',compact('vendors'));
+
     }
 
     public function singleProduct($id){

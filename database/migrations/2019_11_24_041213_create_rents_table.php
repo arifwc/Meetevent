@@ -21,6 +21,7 @@ class CreateRentsTable extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->integer('total_price');
+            $table->enum('transfer',['y','n'])->default('n');
             $table->timestamps();
         });
     }

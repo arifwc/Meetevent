@@ -34,11 +34,11 @@
                             <div class="top">
                                 <h3 class="head">{{$products->name}}</h3>
                                 <div class="price d-flex align-items-center"><span class="lnr lnr-tag"></span> <span class="ml-10">{{$products->price}} $</span></div>
-                                <div class="category">Category: <span>Sound</span></div>
-                                <div class="available">Availibility: <span>Available</span></div>
+                                <div class="category">Category: <span>{{$products->vendor()->first()->category}}</span></div>
+                                <div class="available">Stock <span>{{$products->stock}}</span></div>
                             </div>
                             <div class="middle">
-                                <p class="content">PROSound adalah peneydia jasa layanan sound system profesional dengan berbagai pengalaman event.</p>
+                            <p class="content">{{$products->description}}</p>
                             </div>
                             <div >
                                 <!-- <div class="quantity-container d-flex align-items-center mt-15">
@@ -80,7 +80,8 @@
                         <div class="col-xl-12">
                           <div class="add-review">
                               <h3>Detail Pesanan</h3>
-                              <form action="{{ route('rent') }}" class="main-form">
+                          <form action="/rent" method="post">
+                               {{ csrf_field() }}
                               <input type="hidden" name="product" value="{{$products->id}}">
                               <div class="col-sm-4" >
                                   <p style="text-align:left">Tanggal mulai:</p>
@@ -94,7 +95,7 @@
                               <br>
                               <div class="col-sm-4" >
                                 <p style="text-align:left">Jumlah</p>
-                                <input name="jumlah" type="text" placeholder="Jumlah" onblur="this.placeholder = 'Jumlah'" required class="common-input">
+                                <input name="amount" type="number" placeholder="Jumlah" onblur="this.placeholder = 'Jumlah'" required class="common-input">
                             </div>
                             <br>
                             <div class="col-sm-4">

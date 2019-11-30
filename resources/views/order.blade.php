@@ -33,13 +33,13 @@
                             <div>Total</div>
                         </div>
                         <div class="list-row d-flex justify-content-between">
-                            <div>{{$products->name}}</div>
-                            <div>{{$orderForm['jumlah']}}</div>
+                            <div>{{$rent->product->name}}</div>
+                            {{-- <div>{{$orderForm['jumlah']}}</div> --}}
                             <div>{{$products->price}}</div>
                         </div>
                         <div class="list-row d-flex justify-content-between">
                             <h6>Total</h6>
-                            <div class="total">${{$orderForm['jumlah']*$products->price}}</div>
+                            {{-- <div class="total">${{$orderForm['jumlah']*$products->price}}</div> --}}
                         </div>
                         <div class="d-flex align-items-center mt-10">
                             <input class="pixel-radio" type="radio" id="check" name="brand">

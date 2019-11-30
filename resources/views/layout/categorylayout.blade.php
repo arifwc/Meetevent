@@ -51,7 +51,7 @@
           <a class="navbar-brand" href="/">
             <img src="{{asset('img/logo.png')}}" alt="">
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" pportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
@@ -100,9 +100,9 @@
           </div>
           <div class="sorting mr-auto">
             <select>
-              <option value="1">Show 12</option>
-              <option value="1">Show 12</option>
-              <option value="1">Show 12</option>
+              <option value="1">Show All</option>
+              <option value="1">Show All</option>
+              <option value="1">Show All</option>
             </select>
           </div>
         </div>
@@ -125,7 +125,7 @@
             <a href="#" class="dot-dot"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
             <a href="#">6</a>
             <a href="#" class="next-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> -->
-            {{ $products->links() }}
+            {{-- {{ $products->links() }} --}}
           </div>
         </div>
         <!-- End Filter Bar -->
@@ -134,16 +134,12 @@
         <div class="sidebar-categories">
           <div class="head">Browse Categories</div>
           <ul class="main-categories">
-            <li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable"><span class="lnr lnr-arrow-right"></span>Sound System<span class="number">(53)</span></a>
+            <li class="main-nav-list"><a data-toggle="collapse" href="/category/sound" aria-expanded="false"><span class="lnr lnr-arrow-right"></span>Sound System<span class="number">(53)</span></a>
             </li>
 
-            <li class="main-nav-list"><a data-toggle="collapse" href="#meatFish" aria-expanded="false" aria-controls="meatFish"><span class="lnr lnr-arrow-right"></span>Stage/Panggung<span class="number">(53)</span></a>
+            <li class="main-nav-list"><a data-toggle="collapse" href="/category/stage" aria-expanded="false" "><span class="lnr lnr-arrow-right"></span>Stage/Panggung<span class="number">(53)</span></a>
             </li>
-            <li class="main-nav-list"><a data-toggle="collapse" href="#cooking" aria-expanded="false" aria-controls="cooking"><span class="lnr lnr-arrow-right"></span>Lightning<span class="number">(53)</span></a>
-            </li>
-            <li class="main-nav-list"><a data-toggle="collapse" href="#beverages" aria-expanded="false" aria-controls="beverages"><span class="lnr lnr-arrow-right"></span>Konsumsi<span class="number">(24)</span></a>
-            </li>
-            <li class="main-nav-list"><a data-toggle="collapse" href="#homeClean" aria-expanded="false" aria-controls="homeClean"><span class="lnr lnr-arrow-right"></span>Lain-lain<span class="number">(53)</span></a>
+            <li class="main-nav-list"><a data-toggle="collapse" href="/category/equipment" aria-expanded="false" ><span class="lnr lnr-arrow-right"></span>Lightning<span class="number">(53)</span></a>
             </li>
           </ul>
         </div>

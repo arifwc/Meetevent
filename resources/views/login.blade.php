@@ -8,7 +8,7 @@
 <!-- Start My Account -->
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="login-form">
         <h3 class="billing-title text-center">Login</h3>
         <p class="text-center mt-80 mb-40">Welcome back! Sign in to your account </p>
@@ -17,13 +17,13 @@
           <input type="password" placeholder="Password*" onfocus="this.placeholder=''" onblur="this.placeholder = 'Password*'" required class="common-input mt-20">
           <button class="view-btn color-2 mt-20 w-100"><span>Login</span></button>
           <div class="mt-20 d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center"><input type="checkbox" class="pixel-checkbox" id="login-1"><label for="login-1">Remember me</label></div>
-            <a href="#">Lost your password?</a>
+            {{-- <div class="d-flex align-items-center"><input type="checkbox" class="pixel-checkbox" id="login-1"><label for="login-1">Remember me</label></div> --}}
+            {{-- <a href="#">Lost your password?</a> --}}
           </div>
         </form>
       </div>
     </div>
-    <div class="col-md-6">
+    {{-- <div class="col-md-6">
       <div class="register-form">
         <h3 class="billing-title text-center">Register</h3>
         <p class="text-center mt-40 mb-30">Create your very own account </p>
@@ -38,7 +38,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> --}}
 <!-- End My Account -->
 
 @endsection

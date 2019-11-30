@@ -37,16 +37,26 @@ Route::get('/product/{id}', [
     'as' => 'product.single'
 ]);
 
-Route::get('/product/{id}/order', [
-    'uses' => 'CategoryController@orderProduct',
+Route::get('/order', [
+    'uses' => 'TransactionController@order',
     'as' => 'product.order'
 ]);
 
-Route::post('/order', [
-    'uses'=> 'TransactionController@nyewa',
-    'as' => 'rent'
-]);
+Route::post('/rent', 'TransactionController@nyewa');
 
 Route::get('/finish', function () {
     return view('finish');
 });
+
+// Route::get('/test/{category}',function($category){
+//     $vendor = App\Vendor::where('category',$category)->get();
+
+//     foreach($vendor as $vend){
+//         echo $vend->name."<br>";
+//         foreach($vend->product as $product){
+//             echo $product->name."<br>";
+//         }
+    
+//     }
+     
+// });
