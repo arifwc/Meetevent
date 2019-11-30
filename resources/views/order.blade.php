@@ -32,23 +32,26 @@
                             <div>Jumlah</div>
                             <div>Total</div>
                         </div>
+                        @foreach ($rents as $rent)
                         <div class="list-row d-flex justify-content-between">
-                            <div>{{$rent->product->name}}</div>
-                            {{-- <div>{{$orderForm['jumlah']}}</div> --}}
-                            <div>{{$products->price}}</div>
+                                <div>{{$rent->product->name}}</div>
+                                <div>{{$rent->amount}}</div>
+                                <div>{{$rent->total_price}}</div>
                         </div>
+                        @endforeach
+                        
                         <div class="list-row d-flex justify-content-between">
                             <h6>Total</h6>
-                            {{-- <div class="total">${{$orderForm['jumlah']*$products->price}}</div> --}}
+                            <div class="total">Rp.{{$rent->sum('total_price')}}</div>
                         </div>
                         <div class="d-flex align-items-center mt-10">
-                            <input class="pixel-radio" type="radio" id="check" name="brand">
+                            <input class="pixel-radio" type="radio" id="check" name="transfer-bank">
                             <label for="check" class="bold-lable">Transfer Bank</label>
                         </div>
                         <p class="payment-info">Transfer langsung melalui bank pilihan anda.</p>
                         <div class="d-flex justify-content-between">
                             <div class="d-flex align-items-center">
-                                <input class="pixel-radio" type="radio" id="paypal" name="brand">
+                                <input class="pixel-radio" type="radio" id="paypal" name="paypal">
                                 <label for="paypal" class="bold-lable">Paypal</label>
                             </div>
                             <img src="{{asset('img/pm.jpg')}}" alt="" class="img-fluid">

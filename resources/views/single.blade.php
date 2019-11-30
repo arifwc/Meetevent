@@ -25,7 +25,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="quick-view-carousel-details">
-                            <div class="item" style="background: url({{asset($products->image_path)}});">
+                            <div class="item" style="background: url({{asset($products->path_image)}});">
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                         <div class="quick-view-content">
                             <div class="top">
                                 <h3 class="head">{{$products->name}}</h3>
-                                <div class="price d-flex align-items-center"><span class="lnr lnr-tag"></span> <span class="ml-10">{{$products->price}} $</span></div>
+                                <div class="price d-flex align-items-center"><span class="lnr lnr-tag"></span> <span class="ml-10">Rp.{{$products->price}}</span></div>
                                 <div class="category">Category: <span>{{$products->vendor()->first()->category}}</span></div>
                                 <div class="available">Stock <span>{{$products->stock}}</span></div>
                             </div>
@@ -95,7 +95,7 @@
                               <br>
                               <div class="col-sm-4" >
                                 <p style="text-align:left">Jumlah</p>
-                                <input name="amount" type="number" placeholder="Jumlah" onblur="this.placeholder = 'Jumlah'" required class="common-input">
+                                <input name="amount" type="text" placeholder="contoh: 12" onblur="this.placeholder = 'Jumlah'" required class="common-input">
                             </div>
                             <br>
                             <div class="col-sm-4">

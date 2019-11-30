@@ -60,3 +60,7 @@ Route::get('/finish', function () {
 //     }
      
 // });
+
+Auth::routes(['verify' => false]);
+
+Route::get('/home', 'HomeController@index')->name('home');

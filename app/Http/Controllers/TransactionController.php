@@ -13,10 +13,10 @@ use Carbon\Carbon;
 class TransactionController extends Controller
 {
 
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function nyewa()
     {
@@ -31,8 +31,7 @@ class TransactionController extends Controller
             }
         }
         
-        //$sewa->user_id = Auth::id();
-        $sewa->user_id = 1;
+        $sewa->user_id = Auth::id();
         $sewa->product_id = request('product');
         $sewa->start_date = request('start_date');
         $sewa->end_date = request('end_date');
@@ -44,9 +43,8 @@ class TransactionController extends Controller
 
     public function order()
     {
-        $rent = Rent::where('user_id',Auth::id())->where('created_at','<',Carbon::now()->subHours(1))->latest()->first();
-        return view('order',compact('rent'));
+        $rents = Rent::where('user_id',Auth::id())->where('created_at','>',Carbon::now()->subHours(3))->where('transfer','n')->get();
+        return view('order',compact('rents'));
     }
-    
     
 }

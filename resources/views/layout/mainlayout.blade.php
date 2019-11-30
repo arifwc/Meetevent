@@ -40,7 +40,11 @@
               <li><a href="mailto:support@meetevent.com">support@meetevent.com</a></li>
             </ul>
             <ul class="list">
-              <li><a href="/login">login</a></li>
+                @if(Auth::check())
+                <li><a href="/logout">logout</a></li>
+                @else
+                <li><a href="/login">login</a></li>
+                @endif
             </ul>
           </div>
         </div>

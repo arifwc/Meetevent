@@ -39,7 +39,11 @@
             <li><a href="mailto:support@meetevent.com">support@meetevent.com</a></li>
           </ul>
           <ul class="list">
+            @if(Auth::check())
+            <li><a href="/logout">logout</a></li>
+            @else
             <li><a href="/login">login</a></li>
+            @endif
           </ul>
         </div>
       </div>
@@ -134,12 +138,12 @@
         <div class="sidebar-categories">
           <div class="head">Browse Categories</div>
           <ul class="main-categories">
-            <li class="main-nav-list"><a data-toggle="collapse" href="/category/sound" aria-expanded="false"><span class="lnr lnr-arrow-right"></span>Sound System<span class="number">(53)</span></a>
+            <li class="main-nav-list"><a data-toggle="collapse" href="/category/sound" aria-expanded="false"><span class="lnr lnr-arrow-right"></span>Sound System</a>
             </li>
 
-            <li class="main-nav-list"><a data-toggle="collapse" href="/category/stage" aria-expanded="false" "><span class="lnr lnr-arrow-right"></span>Stage/Panggung<span class="number">(53)</span></a>
+            <li class="main-nav-list"><a data-toggle="collapse" href="/category/stage" aria-expanded="false" "><span class="lnr lnr-arrow-right"></span>Stage/Panggung</a>
             </li>
-            <li class="main-nav-list"><a data-toggle="collapse" href="/category/equipment" aria-expanded="false" ><span class="lnr lnr-arrow-right"></span>Lightning<span class="number">(53)</span></a>
+            <li class="main-nav-list"><a data-toggle="collapse" href="/category/equipment" aria-expanded="false" ><span class="lnr lnr-arrow-right"></span>Equipment</a>
             </li>
           </ul>
         </div>
