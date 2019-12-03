@@ -41,7 +41,11 @@
             </ul>
             <ul class="list">
                 @if(Auth::check())
-                <li><a href="/logout">logout</a></li>
+                <form action="/logout" method="post">
+                  @csrf
+                  <li><input type="submit" value="LOGOUT"></li>
+                </form>
+                
                 @else
                 <li><a href="/login">login</a></li>
                 @endif
