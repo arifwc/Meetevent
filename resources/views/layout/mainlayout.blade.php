@@ -45,7 +45,6 @@
                   @csrf
                   <li><input type="submit" value="LOGOUT"></li>
                 </form>
-                
                 @else
                 <li><a href="/login">login</a></li>
                 @endif
