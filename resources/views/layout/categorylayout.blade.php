@@ -138,12 +138,12 @@
         <div class="sidebar-categories">
           <div class="head">Browse Categories</div>
           <ul class="main-categories">
-            <li class="main-nav-list"><a data-toggle="collapse" href="/category/sound" aria-expanded="false"><span class="lnr lnr-arrow-right"></span>Sound System</a>
+            <li class="main-nav-list"><a data-toggle="collapse" href="category/sound" aria-expanded="false"><span class="lnr lnr-arrow-right"></span>Sound System</a>
             </li>
 
-            <li class="main-nav-list"><a data-toggle="collapse" href="/category/stage" aria-expanded="false" "><span class="lnr lnr-arrow-right"></span>Stage/Panggung</a>
+            <li class="main-nav-list"><a data-toggle="collapse" href="category/stage" aria-expanded="false" "><span class="lnr lnr-arrow-right"></span>Stage/Panggung</a>
             </li>
-            <li class="main-nav-list"><a data-toggle="collapse" href="/category/equipment" aria-expanded="false" ><span class="lnr lnr-arrow-right"></span>Equipment</a>
+            <li class="main-nav-list"><a data-toggle="collapse" href="category/equipment" aria-expanded="false" ><span class="lnr lnr-arrow-right"></span>Equipment</a>
             </li>
           </ul>
         </div>
