@@ -31,7 +31,7 @@
     <div class="row">
     <div class="col-lg-4 col-md-4 mb-4">
           <div class="content">
-              <a href="#" target="_blank">
+              <a href="/category/sound" target="_blank">
                 <div class="content-overlay"></div>
                  <img class="content-image img-fluid d-block mx-auto index-content-img" src="img/c1.jpg" alt="">
                 <div class="content-details fadeIn-bottom">
@@ -42,7 +42,7 @@
     </div>
     <div class="col-lg-4 col-md-4 mb-4">
           <div class="content">
-              <a href="#" target="_blank">
+              <a href="/category/stage" target="_blank">
                 <div class="content-overlay"></div>
                  <img class="content-image img-fluid d-block mx-auto index-content-img" src="img/c2.jpg" alt="">
                 <div class="content-details fadeIn-bottom">
@@ -53,11 +53,11 @@
     </div>
     <div class="col-lg-4 col-md-4 mb-4">
           <div class="content">
-              <a href="#" target="_blank">
+              <a href="/category/equipment" target="_blank">
                 <div class="content-overlay"></div>
                  <img class="content-image img-fluid d-block mx-auto index-content-img" src="img/c3.jpg" alt="">
                 <div class="content-details fadeIn-bottom">
-                  <h3 class="content-title">Lainnya</h3>
+                  <h3 class="content-title">Equipment</h3>
                 </div>
               </a>
           </div>
